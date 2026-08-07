@@ -29,13 +29,13 @@ export async function generateMetadata(): Promise<Metadata> {
       title,
       description,
       type: "website",
-      images: [{ url: "/og.png", width: 1733, height: 907, alt: "Hangeol Chang · AI Researcher at KAIST" }],
+      images: [{ url: "/og.png?v=2", width: 1731, height: 909, alt: "Hangeol Chang · Ph.D. Student at KAIST AI" }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/og.png"],
+      images: ["/og.png?v=2"],
     },
   };
 }
