@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { headers } from "next/headers";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,11 +13,32 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Hangeol Chang · AI Researcher",
-  description:
-    "Hangeol Chang is a Ph.D. student at KAIST researching language model reasoning, retrieval, reinforcement learning, and reward-guided model behavior.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const incoming = await headers();
+  const host = incoming.get("x-forwarded-host") ?? incoming.get("host") ?? "hangeol-chang-ai.hanggg.chatgpt.site";
+  const protocol = incoming.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
+  const baseUrl = new URL(`${protocol}://${host}`);
+  const title = "Hangeol Chang · AI Researcher";
+  const description = "Research in language model reasoning, decision-useful retrieval, reinforcement learning, and reward-guided model behavior.";
+
+  return {
+    metadataBase: baseUrl,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      images: [{ url: "/og.png", width: 1733, height: 907, alt: "Hangeol Chang · AI Researcher at KAIST" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/og.png"],
+    },
+  };
+}
 
 export default function RootLayout({
   children,

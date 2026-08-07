@@ -1,82 +1,70 @@
 const publications = [
   {
-    index: "01",
-    venue: "ICML 2026",
-    title:
-      "Universal Reasoner: A Single, Composable Plug-and-Play Reasoner for Frozen LLMs",
-    authors:
-      "Jaemin Kim*, Hangeol Chang*, Hyunmin Hwang*, Choonghan Kim, Jong Chul Ye",
-    description:
-      "A reward-trained guidance module that gives frozen language models new reasoning skills — without updating the backbone.",
+    year: "2026",
+    venue: "ICML",
+    topic: "Reasoning",
+    title: "Universal Reasoner: A Single, Composable Plug-and-Play Reasoner for Frozen LLMs",
+    authors: "Jaemin Kim*, Hangeol Chang*, Hyunmin Hwang*, Choonghan Kim, Jong Chul Ye",
+    summary: "A lightweight reward-trained module that adds composable reasoning skills to frozen language models.",
     href: "https://arxiv.org/abs/2505.19075",
-    accent: "lime",
   },
   {
-    index: "02",
-    venue: "UNDER REVIEW · 2026",
-    title:
-      "Hypothesis-Conditioned Query Rewriting for Decision-Useful Retrieval",
+    year: "2026",
+    venue: "Under review",
+    topic: "Retrieval",
+    title: "Hypothesis-Conditioned Query Rewriting for Decision-Useful Retrieval",
     authors: "Hangeol Chang, Changsun Lee, Seungjoon Rho, Junho Yeo, Jong Chul Ye",
-    description:
-      "A training-free retrieval planner that turns a working hypothesis into targeted, decision-useful evidence queries.",
+    summary: "A training-free retrieval planner that searches for evidence useful to a decision, rather than broadly relevant context.",
     href: "https://arxiv.org/abs/2603.19008",
-    accent: "blue",
   },
   {
-    index: "03",
-    venue: "UNDER REVIEW · 2026",
-    title:
-      "Dementia-R1: Reinforced Pretraining and Reasoning from Unstructured Clinical Notes",
-    authors:
-      "Choonghan Kim*, Hyunmin Hwang*, Hangeol Chang*, Jaemin Kim*, Jinse Park, Jae-Sung Lim, Jong Chul Ye",
-    description:
-      "Longitudinal clinical reasoning with verifiable intermediate rewards for real-world dementia prognosis.",
+    year: "2026",
+    venue: "Under review",
+    topic: "Clinical AI",
+    title: "Dementia-R1: Reinforced Pretraining and Reasoning from Unstructured Clinical Notes",
+    authors: "Choonghan Kim*, Hyunmin Hwang*, Hangeol Chang*, Jaemin Kim*, Jinse Park, Jae-Sung Lim, Jong Chul Ye",
+    summary: "Longitudinal clinical reasoning with verifiable intermediate rewards for real-world dementia prognosis.",
     href: "https://arxiv.org/abs/2601.03018",
-    accent: "coral",
   },
   {
-    index: "04",
-    venue: "ICML WORKSHOP 2026",
-    title:
-      "AgentPSO: Evolving Agent Reasoning Skill via Multi-agent Particle Swarm Optimization",
+    year: "2026",
+    venue: "ICML Workshop",
+    topic: "Agents",
+    title: "AgentPSO: Evolving Agent Reasoning Skill via Multi-agent Particle Swarm Optimization",
     authors: "Hyunmin Hwang*, Jaemin Kim*, Choonghan Kim, Hangeol Chang, Jong Chul Ye",
-    description:
-      "A multi-agent framework that evolves reusable reasoning skills through particle-swarm-inspired search.",
+    summary: "A particle-swarm-inspired framework for evolving reusable reasoning skills across a population of agents.",
     href: "https://arxiv.org/abs/2605.08704",
-    accent: "violet",
   },
   {
-    index: "05",
-    venue: "IPIU 2026 · BEST PAPER",
-    title:
-      "Ground-A-Score: Scaling Up the Score Distillation for Multi-Attribute Editing",
+    year: "2026",
+    venue: "IPIU · Best Paper",
+    topic: "Image Editing",
+    title: "Ground-A-Score: Scaling Up the Score Distillation for Multi-Attribute Editing",
     authors: "Hangeol Chang*, Jinho Chang*, Jong Chul Ye",
-    description:
-      "Grounded divide-and-conquer score distillation for precise, multi-attribute diffusion image editing.",
+    summary: "Grounded score distillation for precise image edits with multiple attributes and spatial constraints.",
     href: "https://arxiv.org/abs/2403.13551",
-    accent: "gold",
   },
 ];
 
-const milestones = [
+const focusAreas = [
   {
-    year: "2026",
-    title: "Silver Prize · Samsung Humantech Paper Award",
-    note: "Universal Reasoner · 2nd Prize in Signal Processing",
+    number: "01",
+    title: "Language model reasoning",
+    text: "Transferable reasoning skills, reinforcement learning, and evaluation for frozen or efficient language models.",
   },
   {
-    year: "2026",
-    title: "Best Paper Award · IPIU",
-    note: "Ground-A-Score · Top 2% paper",
+    number: "02",
+    title: "Decision-useful retrieval",
+    text: "RAG pipelines that retrieve evidence capable of changing a model's final decision.",
   },
   {
-    year: "2025",
-    title: "On-site Research · NAVER",
-    note: "RAG pipeline for clinical decision support",
+    number: "03",
+    title: "Reward-guided behavior",
+    text: "Practical methods that translate reward signals into controllable model behavior at inference time.",
   },
 ];
 
-function Arrow() {
+function ExternalArrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
@@ -84,218 +72,138 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Hangeol Chang, home">
-          HC<span>.</span>
-        </a>
+        <a className="name-mark" href="#top">Hangeol Chang</a>
         <nav aria-label="Primary navigation">
-          <a href="#research">Research</a>
           <a href="#work">Work</a>
-          <a href="#about">About</a>
+          <a href="#focus">Research</a>
+          <a href="#background">Background</a>
         </nav>
-        <a className="header-contact" href="mailto:hangeol@kaist.ac.kr">
-          Let&apos;s talk <Arrow />
-        </a>
+        <a className="cv-link" href="/hangeol-chang-cv.pdf">CV <ExternalArrow /></a>
       </header>
 
-      <section className="hero" id="top">
-        <div className="eyebrow">
-          <span className="status-dot" /> Ph.D. Student · KAIST AI
+      <section className="intro" id="top">
+        <div className="intro-identity">
+          <p className="overline">Ph.D. Student · KAIST AI</p>
+          <h1>Hangeol<br />Chang</h1>
         </div>
-        <div className="hero-grid">
-          <div>
-            <h1>
-              I build language models that
-              <span className="emphasis"> reason with direction.</span>
-            </h1>
-            <p className="hero-copy">
-              I&apos;m <strong>Hangeol Chang</strong>, a researcher working at the
-              intersection of reasoning, retrieval, and reinforcement learning.
-              My work turns reward signals into practical ways to steer and
-              structure model behavior.
-            </p>
-            <div className="hero-links">
-              <a className="button primary" href="#research">
-                Explore research <span aria-hidden="true">↓</span>
-              </a>
-              <a className="button secondary" href="/hangeol-chang-cv.pdf">
-                Download CV <Arrow />
-              </a>
-            </div>
-          </div>
-
-          <div className="research-orbit" aria-label="Research themes: reason, retrieve, reward">
-            <div className="orbit-ring ring-one" />
-            <div className="orbit-ring ring-two" />
-            <div className="orbit-core">
-              <span>MODEL</span>
-              <strong>BEHAVIOR</strong>
-            </div>
-            <div className="orbit-node node-reason">
-              <span>01</span>
-              <strong>REASON</strong>
-            </div>
-            <div className="orbit-node node-retrieve">
-              <span>02</span>
-              <strong>RETRIEVE</strong>
-            </div>
-            <div className="orbit-node node-reward">
-              <span>03</span>
-              <strong>REWARD</strong>
-            </div>
-          </div>
-        </div>
-        <div className="hero-meta">
-          <span>Seoul · Daejeon, Korea</span>
-          <span>Available for research conversations</span>
-          <span>Last updated · Aug 2026</span>
-        </div>
-      </section>
-
-      <section className="focus-section" aria-labelledby="focus-heading">
-        <div className="section-kicker">CURRENT FOCUS</div>
-        <h2 id="focus-heading">
-          Better models are not only larger.
-          <br />They are <em>better guided.</em>
-        </h2>
-        <div className="focus-grid">
-          <article className="focus-card lime-card">
-            <span className="card-number">01</span>
-            <h3>Reasoning</h3>
-            <p>
-              Efficient, composable reasoning skills that transfer across tasks
-              and frozen model backbones.
-            </p>
-            <span className="card-tag">GRPO · RL · Evaluation</span>
-          </article>
-          <article className="focus-card blue-card">
-            <span className="card-number">02</span>
-            <h3>Retrieval</h3>
-            <p>
-              RAG systems that seek evidence useful for decisions, not merely
-              documents that look relevant.
-            </p>
-            <span className="card-tag">RAG · Query Planning</span>
-          </article>
-          <article className="focus-card paper-card">
-            <span className="card-number">03</span>
-            <h3>Reward Guidance</h3>
-            <p>
-              Turning trajectory-level feedback into precise, controllable model
-              behavior at inference time.
-            </p>
-            <span className="card-tag">Guidance · Alignment</span>
-          </article>
-        </div>
-      </section>
-
-      <section className="research-section" id="research" aria-labelledby="research-heading">
-        <div className="section-heading-row">
-          <div>
-            <div className="section-kicker">SELECTED RESEARCH</div>
-            <h2 id="research-heading">Ideas, tested in the wild.</h2>
-          </div>
-          <p>
-            Five projects across language reasoning, retrieval, clinical AI, and
-            generative modeling. <span>* equal contribution</span>
+        <div className="intro-statement">
+          <p className="lead">
+            I study how to make language models <strong>reason, retrieve evidence,</strong> and <strong>respond to rewards</strong> more effectively.
           </p>
+          <p className="intro-detail">
+            My work develops empirical pipelines that steer and structure model behavior, with applications in general reasoning and clinical AI.
+          </p>
+          <div className="profile-links">
+            <a href="mailto:hangeol@kaist.ac.kr">Email <ExternalArrow /></a>
+            <a href="https://github.com/hangeol" target="_blank" rel="noreferrer">GitHub <ExternalArrow /></a>
+            <a href="https://scholar.google.com/citations?user=VvJxxzAAAAAJ&hl=en" target="_blank" rel="noreferrer">Scholar <ExternalArrow /></a>
+            <a href="https://www.linkedin.com/in/hangeol-chang" target="_blank" rel="noreferrer">LinkedIn <ExternalArrow /></a>
+          </div>
+        </div>
+      </section>
+
+      <section className="work-section" id="work" aria-labelledby="work-title">
+        <div className="section-intro">
+          <div>
+            <p className="overline">Selected work</p>
+            <h2 id="work-title">Research at a glance</h2>
+          </div>
+          <p>Five selected projects spanning reasoning, retrieval, agents, clinical AI, and generative modeling. * Equal contribution.</p>
         </div>
 
-        <div className="publication-list">
-          {publications.map((paper) => (
-            <a
-              className={`publication ${paper.accent}`}
-              href={paper.href}
-              key={paper.title}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="publication-index">{paper.index}</div>
-              <div className="publication-body">
-                <div className="publication-venue">{paper.venue}</div>
-                <h3>{paper.title}</h3>
-                <p className="publication-authors">{paper.authors}</p>
-                <p className="publication-description">{paper.description}</p>
+        <div className="work-table">
+          {publications.map((paper, index) => (
+            <a className="work-row" href={paper.href} target="_blank" rel="noreferrer" key={paper.title}>
+              <div className="work-number">{String(index + 1).padStart(2, "0")}</div>
+              <div className="work-meta">
+                <span>{paper.year}</span>
+                <strong>{paper.venue}</strong>
+                <span className="topic">{paper.topic}</span>
               </div>
-              <div className="publication-arrow" aria-hidden="true">↗</div>
+              <div className="work-main">
+                <h3>{paper.title}</h3>
+                <p className="authors">{paper.authors}</p>
+                <p className="summary">{paper.summary}</p>
+              </div>
+              <div className="row-arrow"><ExternalArrow /></div>
             </a>
           ))}
         </div>
       </section>
 
-      <section className="work-section" id="work" aria-labelledby="work-heading">
-        <div className="work-intro">
-          <div className="section-kicker light">RECOGNITION & PRACTICE</div>
-          <h2 id="work-heading">Research that leaves the page.</h2>
-          <p>
-            From award-winning papers to physician-support systems, I care about
-            methods that survive contact with real constraints.
-          </p>
+      <section className="focus-section" id="focus" aria-labelledby="focus-title">
+        <div className="section-label">
+          <p className="overline">Research focus</p>
+          <h2 id="focus-title">What connects the work</h2>
         </div>
-        <div className="milestone-list">
-          {milestones.map((item) => (
-            <article className="milestone" key={item.title}>
-              <span>{item.year}</span>
-              <div>
-                <h3>{item.title}</h3>
-                <p>{item.note}</p>
-              </div>
+        <div className="focus-list">
+          {focusAreas.map((area) => (
+            <article key={area.title}>
+              <span>{area.number}</span>
+              <h3>{area.title}</h3>
+              <p>{area.text}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="about-section" id="about" aria-labelledby="about-heading">
-        <div className="about-lead">
-          <div className="section-kicker">ABOUT</div>
-          <h2 id="about-heading">
-            From physics to AI,
-            <br />guided by hard questions.
-          </h2>
+      <section className="background-section" id="background" aria-labelledby="background-title">
+        <div className="section-label">
+          <p className="overline">Background</p>
+          <h2 id="background-title">Experience & education</h2>
         </div>
-        <div className="about-copy">
-          <p className="about-large">
-            Before language models, I studied solid-state physics. That training
-            still shapes how I work: start from mechanisms, build an empirical
-            pipeline, and test what actually moves the system.
-          </p>
-          <div className="education-list">
-            <div>
-              <span>2024 — PRESENT</span>
-              <strong>Ph.D. in AI · KAIST</strong>
-              <p>Advisor: Prof. Jong Chul Ye</p>
+        <div className="background-columns">
+          <div>
+            <h3>Experience & recognition</h3>
+            <div className="timeline">
+              <article>
+                <span>2026</span>
+                <div><strong>Samsung Humantech Paper Award</strong><p>Silver Prize · 2nd Prize in Signal Processing</p></div>
+              </article>
+              <article>
+                <span>2026</span>
+                <div><strong>IPIU Best Paper Award</strong><p>Ground-A-Score · Top 2% paper</p></div>
+              </article>
+              <article>
+                <span>2025</span>
+                <div><strong>NAVER · On-site Research Project</strong><p>RAG pipeline for clinical decision support</p></div>
+              </article>
+              <article>
+                <span>2024—</span>
+                <div><strong>Clinical AI Research Project</strong><p>LLM-based dementia data processing and support platform</p></div>
+              </article>
             </div>
-            <div>
-              <span>2022 — 2024</span>
-              <strong>M.S. in AI · KAIST</strong>
-              <p>Diffusion models and LLM-guided editing</p>
-            </div>
-            <div>
-              <span>2018 — 2021</span>
-              <strong>B.S. · Yonsei University</strong>
-              <p>Full scholarship · Early graduation · 3.95/4.3</p>
+          </div>
+          <div>
+            <h3>Education</h3>
+            <div className="timeline">
+              <article>
+                <span>2024—</span>
+                <div><strong>Ph.D. in AI · KAIST</strong><p>Advisor: Prof. Jong Chul Ye</p></div>
+              </article>
+              <article>
+                <span>2022—24</span>
+                <div><strong>M.S. in AI · KAIST</strong><p>Diffusion models and LLM-guided image editing</p></div>
+              </article>
+              <article>
+                <span>2018—21</span>
+                <div><strong>B.S. · Yonsei University</strong><p>Full scholarship · Early graduation · 3.95/4.3</p></div>
+              </article>
+              <article>
+                <span>2021—22</span>
+                <div><strong>Graduate research · Solid-state physics</strong><p>Yonsei University</p></div>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
       <footer>
-        <div className="footer-top">
-          <div>
-            <div className="section-kicker light">CONNECT</div>
-            <h2>Let&apos;s think through<br />something difficult.</h2>
-          </div>
-          <a className="footer-email" href="mailto:hangeol@kaist.ac.kr">
-            hangeol@kaist.ac.kr <Arrow />
-          </a>
+        <div>
+          <p className="overline">Contact</p>
+          <a className="email" href="mailto:hangeol@kaist.ac.kr">hangeol@kaist.ac.kr <ExternalArrow /></a>
         </div>
-        <div className="footer-bottom">
-          <span>© 2026 Hangeol Chang</span>
-          <div className="social-links">
-            <a href="https://github.com/hangeol" target="_blank" rel="noreferrer">GitHub <Arrow /></a>
-            <a href="https://scholar.google.com/citations?user=VvJxxzAAAAAJ&hl=en" target="_blank" rel="noreferrer">Scholar <Arrow /></a>
-            <a href="https://www.linkedin.com/in/hangeol-chang" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
-          </div>
-        </div>
+        <p>Hangeol Chang · KAIST AI · 2026</p>
       </footer>
     </main>
   );
