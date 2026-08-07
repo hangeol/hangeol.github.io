@@ -113,11 +113,8 @@ export default function Home() {
 
       <section className="work-section" id="work" aria-labelledby="work-title">
         <div className="section-intro">
-          <div>
-            <p className="overline">Selected work</p>
-            <h2 id="work-title">Research at a glance</h2>
-          </div>
-          <p>Five selected projects spanning reasoning, retrieval, agents, clinical AI, and generative modeling. * Equal contribution.</p>
+          <h2 id="work-title">Research</h2>
+          <p>* Equal contribution</p>
         </div>
 
         <div className="work-table">
@@ -142,8 +139,7 @@ export default function Home() {
 
       <section className="focus-section" id="focus" aria-labelledby="focus-title">
         <div className="section-label">
-          <p className="overline">Research focus</p>
-          <h2 id="focus-title">What connects the work</h2>
+          <h2 id="focus-title">Research focus</h2>
         </div>
         <div className="focus-list">
           {focusAreas.map((area) => (
@@ -158,7 +154,6 @@ export default function Home() {
 
       <section className="background-section" id="background" aria-labelledby="background-title">
         <div className="section-label">
-          <p className="overline">Background</p>
           <h2 id="background-title">Experience & education</h2>
         </div>
         <div className="background-columns">
@@ -209,7 +204,6 @@ export default function Home() {
 
       <footer>
         <div>
-          <p className="overline">Contact</p>
           <a className="email" href="mailto:hangeol@kaist.ac.kr">hangeol@kaist.ac.kr <ExternalArrow /></a>
         </div>
         <p>Hangeol Chang · KAIST AI · 2026</p>

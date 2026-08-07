@@ -134,10 +134,10 @@ h1 {
 
 .section-intro {
   display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 48px;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
   align-items: end;
-  margin-bottom: 38px;
+  margin-bottom: 28px;
 }
 
 .section-intro h2,
@@ -152,8 +152,8 @@ h1 {
 .section-intro > p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.86rem;
-  line-height: 1.55;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.62rem;
 }
 
 .work-table { border-top: 1px solid var(--ink); }
@@ -287,7 +287,6 @@ a:focus-visible { outline: 3px solid #8aa2ff; outline-offset: 4px; }
   nav { display: none; }
   .intro { grid-template-columns: 1fr; gap: 56px; }
   .section-intro { grid-template-columns: 1fr; gap: 24px; }
-  .section-intro > p { max-width: 550px; }
   .focus-section, .background-section { grid-template-columns: 1fr; gap: 48px; }
 }
 
