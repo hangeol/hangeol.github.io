@@ -58,34 +58,17 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = incoming.get("x-forwarded-host") ?? incoming.get("host") ?? "hangeol-chang-ai.hanggg.chatgpt.site";
   const protocol = incoming.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
   const baseUrl = new URL(`${protocol}://${host}`);
-  const isCanonicalHost = host === "hangeol.github.io" || host.startsWith("localhost");
-  const title = "Hangeol Chang (장한결) · KAIST AI Researcher";
-  const description = "Hangeol Chang (장한결) is a Ph.D. student at KAIST researching language model reasoning, retrieval, reinforcement learning, and clinical AI.";
+  const title = "Hangeol Chang · AI Researcher";
+  const description = "Research in language model reasoning, decision-useful retrieval, reinforcement learning, and reward-guided model behavior.";
 
   return {
     metadataBase: baseUrl,
     title,
     description,
-    keywords: [
-      "Hangeol Chang",
-      "장한결",
-      "Hangeol",
-      "KAIST",
-      "KAIST AI",
-      "AI researcher",
-      "language model reasoning",
-      "retrieval-augmented generation",
-      "reinforcement learning",
-    ],
-    alternates: { canonical: canonicalUrl },
-    robots: isCanonicalHost
-      ? { index: true, follow: true }
-      : { index: false, follow: true },
     openGraph: {
       title,
       description,
       type: "website",
-      url: canonicalUrl,
       images: [{ url: "/og.png?v=2", width: 1731, height: 909, alt: "Hangeol Chang · Ph.D. Student at KAIST AI" }],
     },
     twitter: {

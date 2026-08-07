@@ -4,14 +4,14 @@ import test from "node:test";
 
 const outputRoot = new URL("../_github-pages/", import.meta.url);
 
-test("GitHub Pages export contains the portfolio and canonical metadata", async () => {
+test("GitHub Pages export contains the portfolio and profile metadata", async () => {
   const html = await readFile(new URL("index.html", outputRoot), "utf8");
 
-  assert.match(html, /<title>Hangeol Chang \(장한결\) · KAIST AI Researcher<\/title>/);
+  assert.match(html, /<title>Hangeol Chang · AI Researcher<\/title>/);
+  assert.match(html, /<meta name="description" content="Research in language model reasoning, decision-useful retrieval, reinforcement learning, and reward-guided model behavior\."/);
   assert.match(html, /https:\/\/hangeol\.github\.io/);
-  assert.match(html, /<link rel="canonical" href="https:\/\/hangeol\.github\.io"/);
-  assert.match(html, /<meta name="robots" content="index, follow"/);
-  assert.match(html, /<p class="name-korean" lang="ko">장한결<\/p>/);
+  assert.doesNotMatch(html, /<meta name="keywords"/);
+  assert.doesNotMatch(html, /class="name-korean"/);
   assert.match(html, /"@type":"ProfilePage"/);
   assert.match(html, /"alternateName":\["장한결","Hangeol"\]/);
   assert.match(html, /"alternateName":"KAIST"/);

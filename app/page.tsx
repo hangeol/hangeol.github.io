@@ -81,7 +81,6 @@ export default function Home() {
           height="530"
         />
         <h1>Hangeol Chang</h1>
-        <p className="name-korean" lang="ko">장한결</p>
         <p className="role">Ph.D. Student</p>
         <p className="affiliation">KAIST Kim Jaechul Graduate School of AI</p>
         <a className="email-small" href="mailto:hangeol@kaist.ac.kr">hangeol@kaist.ac.kr</a>
