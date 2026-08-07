@@ -39,7 +39,8 @@ const publications = [
 const news = [
   { date: "Apr. 2026", text: "Universal Reasoner accepted to ICML 2026." },
   { date: "Mar. 2026", text: "Hypothesis-Conditioned Query Rewriting released on arXiv." },
-  { date: "Feb. 2026", text: "Received Silver Prizes at the 32nd Samsung Humantech Paper Award and the Best Paper Award at IPIU 2026." },
+  { date: "Feb. 2026", text: "Received the Silver Prize at the 32nd Samsung Humantech Paper Award." },
+  { date: "Feb. 2026", text: "Received the Silver Prize in the IPIU 2026 Best Paper Award." },
   { date: "Jan. 2026", text: "Dementia-R1 released on arXiv." },
 ];
 

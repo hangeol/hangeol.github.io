@@ -22,6 +22,8 @@ test("GitHub Pages export contains the portfolio and profile metadata", async ()
   assert.match(html, /Ground-A-Score/);
   assert.doesNotMatch(html, /IPIU 2026 · Best Paper/);
   assert.match(html, /Silver Prize · Best Paper Award at IPIU 2026/);
+  assert.match(html, /Received the Silver Prize at the 32nd Samsung Humantech Paper Award\./);
+  assert.match(html, /Received the Silver Prize in the IPIU 2026 Best Paper Award\./);
   assert.match(html, /<strong class="author-self">Hangeol Chang<\/strong>/);
   assert.match(html, /href="\/hangeol-chang-cv\.pdf"/);
   assert.match(html, /src="\/hangeol-chang\.jpeg"/);
