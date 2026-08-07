@@ -16,6 +16,7 @@ test("GitHub Pages export contains the portfolio and profile metadata", async ()
   assert.match(html, /"alternateName":\["장한결","Hangeol"\]/);
   assert.match(html, /"alternateName":"KAIST"/);
   assert.match(html, /Universal Reasoner/);
+  assert.match(html, /Apr\. 2026/);
   assert.match(html, /Hypothesis-Conditioned Query Rewriting/);
   assert.match(html, /Dementia-R1/);
   assert.match(html, /Ground-A-Score/);
