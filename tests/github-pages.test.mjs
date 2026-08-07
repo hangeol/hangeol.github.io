@@ -7,8 +7,14 @@ const outputRoot = new URL("../_github-pages/", import.meta.url);
 test("GitHub Pages export contains the portfolio and canonical metadata", async () => {
   const html = await readFile(new URL("index.html", outputRoot), "utf8");
 
-  assert.match(html, /<title>Hangeol Chang · AI Researcher<\/title>/);
+  assert.match(html, /<title>Hangeol Chang \(장한결\) · KAIST AI Researcher<\/title>/);
   assert.match(html, /https:\/\/hangeol\.github\.io/);
+  assert.match(html, /<link rel="canonical" href="https:\/\/hangeol\.github\.io"/);
+  assert.match(html, /<meta name="robots" content="index, follow"/);
+  assert.match(html, /<p class="name-korean" lang="ko">장한결<\/p>/);
+  assert.match(html, /"@type":"ProfilePage"/);
+  assert.match(html, /"alternateName":\["장한결","Hangeol"\]/);
+  assert.match(html, /"alternateName":"KAIST"/);
   assert.match(html, /Universal Reasoner/);
   assert.match(html, /Hypothesis-Conditioned Query Rewriting/);
   assert.match(html, /Dementia-R1/);

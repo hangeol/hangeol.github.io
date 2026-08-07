@@ -58,11 +58,19 @@ h3,
 p { margin-top: 0; }
 
 h1 {
-  margin-bottom: 12px;
+  margin-bottom: 3px;
   color: var(--ink);
   font-size: 1.72rem;
   line-height: 1.15;
   letter-spacing: -0.025em;
+}
+
+.name-korean {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
 }
 
 .role { margin-bottom: 2px; font-size: 0.98rem; }
@@ -226,12 +234,12 @@ a:focus-visible { outline: 3px solid #9ac4d8; outline-offset: 3px; }
   .profile-photo {
     width: 112px;
     height: 140px;
-    grid-row: 1 / span 5;
+    grid-row: 1 / span 6;
     margin: 0;
   }
 
   .profile h1 { align-self: end; margin-bottom: 7px; }
-  .profile .role, .profile .affiliation, .profile .email-small, .profile nav { grid-column: 2; }
+  .profile .name-korean, .profile .role, .profile .affiliation, .profile .email-small, .profile nav { grid-column: 2; }
   .affiliation { max-width: none; margin: 0 0 4px; }
   .profile nav { justify-content: flex-start; margin-top: 12px; }
 }
