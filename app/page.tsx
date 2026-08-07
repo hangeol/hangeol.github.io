@@ -28,7 +28,7 @@ const publications = [
     href: "https://arxiv.org/abs/2605.08704",
   },
   {
-    venue: "IPIU 2026 · Best Paper",
+    venue: "IPIU 2026",
     title: "Ground-A-Score: Scaling Up the Score Distillation for Multi-Attribute Editing",
     authors: "Hangeol Chang*, Jinho Chang*, Jong Chul Ye",
     summary: "Grounded score distillation for precise image edits with multiple attributes and spatial constraints.",
@@ -39,7 +39,7 @@ const publications = [
 const news = [
   { date: "Apr. 2026", text: "Universal Reasoner accepted to ICML 2026." },
   { date: "Mar. 2026", text: "Hypothesis-Conditioned Query Rewriting released on arXiv." },
-  { date: "Feb. 2026", text: "Received the Samsung Humantech Silver Prize and the IPIU Best Paper Award." },
+  { date: "Feb. 2026", text: "Received Silver Prizes at the 32nd Samsung Humantech Paper Award and the Best Paper Award at IPIU 2026." },
   { date: "Jan. 2026", text: "Dementia-R1 released on arXiv." },
 ];
 
@@ -148,8 +148,8 @@ export default function Home() {
         <section id="honors">
           <h2>Honors</h2>
           <div className="compact-list">
-            <article><span>2026</span><div><strong>Silver Prize · Samsung Humantech Paper Award</strong><p>Universal Reasoner · 2nd Prize in Signal Processing</p></div></article>
-            <article><span>2026</span><div><strong>Best Paper Award · IPIU</strong><p>Ground-A-Score · Top 2% paper</p></div></article>
+            <article><span>2026</span><div><strong>Silver Prize · 32nd Samsung Humantech Paper Award</strong><p>Universal Reasoner · 2nd Prize in Signal Processing</p></div></article>
+            <article><span>2026</span><div><strong>Silver Prize · Best Paper Award at IPIU 2026</strong><p>Ground-A-Score · Top 2% paper</p></div></article>
           </div>
         </section>
 
