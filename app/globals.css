@@ -68,6 +68,28 @@ footer {
   border-bottom: 1px solid var(--line);
 }
 
+.identity-top {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+.identity-top .overline {
+  margin: 0 0 2px;
+  line-height: 1.6;
+}
+
+.profile-photo {
+  width: 104px;
+  height: 124px;
+  display: block;
+  border: 1px solid var(--line);
+  background: var(--white);
+  object-fit: cover;
+  object-position: center 28%;
+}
+
 .overline {
   margin: 0 0 18px;
   color: var(--blue);
@@ -275,6 +297,7 @@ a:focus-visible { outline: 3px solid #8aa2ff; outline-offset: 4px; }
   .intro { min-height: auto; padding: 52px 0; gap: 44px; }
   h1 { font-size: clamp(3.8rem, 20vw, 5.4rem); }
   .lead { font-size: 1.65rem; }
+  .profile-photo { width: 88px; height: 104px; }
   .work-section { padding: 64px 0 72px; }
   .work-row { grid-template-columns: 28px 1fr 28px; gap: 12px; padding: 24px 0; }
   .work-meta { grid-column: 2; grid-row: 1; flex-direction: row; flex-wrap: wrap; align-items: center; }

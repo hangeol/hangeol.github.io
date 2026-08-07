@@ -83,7 +83,16 @@ export default function Home() {
 
       <section className="intro" id="top">
         <div className="intro-identity">
-          <p className="overline">Ph.D. Student · KAIST AI</p>
+          <div className="identity-top">
+            <img
+              className="profile-photo"
+              src="/hangeol-chang.jpeg"
+              alt="Portrait of Hangeol Chang"
+              width="412"
+              height="530"
+            />
+            <p className="overline">Ph.D. Student<br />KAIST AI</p>
+          </div>
           <h1>Hangeol<br />Chang</h1>
         </div>
         <div className="intro-statement">
