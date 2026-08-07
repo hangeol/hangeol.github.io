@@ -159,6 +159,11 @@ h2 {
   line-height: 1.45;
 }
 
+.author-self {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .summary {
   margin-bottom: 5px;
   color: var(--muted);

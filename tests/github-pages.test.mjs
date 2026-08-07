@@ -13,6 +13,7 @@ test("GitHub Pages export contains the portfolio and canonical metadata", async 
   assert.match(html, /Hypothesis-Conditioned Query Rewriting/);
   assert.match(html, /Dementia-R1/);
   assert.match(html, /Ground-A-Score/);
+  assert.match(html, /<strong class="author-self">Hangeol Chang<\/strong>/);
   assert.match(html, /href="\/hangeol-chang-cv\.pdf"/);
   assert.match(html, /src="\/hangeol-chang\.jpeg"/);
 });

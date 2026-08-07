@@ -59,6 +59,16 @@ function ExternalArrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
+function PublicationAuthors({ authors }: { authors: string }) {
+  const [before, after] = authors.split("Hangeol Chang");
+
+  return (
+    <>
+      {before}<strong className="author-self">Hangeol Chang</strong>{after}
+    </>
+  );
+}
+
 export default function Home() {
   return (
     <main className="page-shell">
@@ -115,7 +125,7 @@ export default function Home() {
               <article className="publication" key={paper.title}>
                 <div className="publication-venue">{paper.venue}</div>
                 <h3>{paper.title}</h3>
-                <p className="authors">{paper.authors}</p>
+                <p className="authors"><PublicationAuthors authors={paper.authors} /></p>
                 <p className="summary">{paper.summary}</p>
                 <a className="paper-link" href={paper.href} target="_blank" rel="noreferrer">arXiv <ExternalArrow /></a>
               </article>
