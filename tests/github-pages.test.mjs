@@ -19,6 +19,8 @@ test("GitHub Pages export contains the portfolio and profile metadata", async ()
   assert.match(html, /Apr\. 2026/);
   assert.match(html, /Hypothesis-Conditioned Query Rewriting/);
   assert.match(html, /Dementia-R1/);
+  assert.match(html, /Dementia-R1 accepted to EMNLP 2026\./);
+  assert.match(html, /EMNLP 2026/);
   assert.match(html, /Ground-A-Score/);
   assert.doesNotMatch(html, /IPIU 2026 · Best Paper/);
   assert.match(html, /Silver Prize · Best Paper Award at IPIU 2026/);

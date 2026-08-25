@@ -14,7 +14,7 @@ const publications = [
     href: "https://arxiv.org/abs/2603.19008",
   },
   {
-    venue: "Under review · 2026",
+    venue: "EMNLP 2026",
     title: "Dementia-R1: Reinforced Pretraining and Reasoning from Unstructured Clinical Notes",
     authors: "Choonghan Kim*, Hyunmin Hwang*, Hangeol Chang*, Jaemin Kim*, Jinse Park, Jae-Sung Lim, Jong Chul Ye",
     summary: "Longitudinal clinical reasoning with verifiable intermediate rewards for real-world dementia prognosis.",
@@ -37,6 +37,7 @@ const publications = [
 ];
 
 const news = [
+  { date: "Aug. 2026", text: "Dementia-R1 accepted to EMNLP 2026." },
   { date: "Apr. 2026", text: "Universal Reasoner accepted to ICML 2026." },
   { date: "Mar. 2026", text: "Hypothesis-Conditioned Query Rewriting released on arXiv." },
   { date: "Feb. 2026", text: "Received the Silver Prize at the 32nd Samsung Humantech Paper Award." },
