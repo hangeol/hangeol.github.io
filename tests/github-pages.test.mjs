@@ -35,8 +35,13 @@ test("GitHub Pages export contains the portfolio and profile metadata", async ()
   assert.match(html, /Ph\.D\. in Artificial Intelligence · KAIST/);
   assert.match(html, /M\.S\. in Artificial Intelligence · KAIST/);
   assert.match(html, /Advisor: Prof\. Jong Chul Ye/);
-  assert.match(html, /M\.S\.–Ph\.D\. Integrated Program in Solid-State Physics · Yonsei University/);
-  assert.match(html, /Three semesters of graduate coursework and research before transitioning to AI/);
+  assert.match(html, /Graduate Studies in Solid-State Physics · Yonsei University/);
+  assert.match(html, /M\.S\.–Ph\.D\. integrated program · Three semesters completed before transitioning to AI/);
+
+  const honorsPosition = html.indexOf("<h2>Honors</h2>");
+  const educationPosition = html.indexOf("<h2>Education</h2>");
+  const projectsPosition = html.indexOf("<h2>Research Projects</h2>");
+  assert.ok(honorsPosition < educationPosition && educationPosition < projectsPosition);
 });
 
 test("GitHub Pages export includes its linked public assets", async () => {

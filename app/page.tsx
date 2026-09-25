@@ -53,7 +53,7 @@ const projects = [
 const education = [
   { date: "2024—", title: "Ph.D. in Artificial Intelligence · KAIST", detail: "Language model reasoning, retrieval & reinforcement learning · Advisor: Prof. Jong Chul Ye" },
   { date: "2022—24", title: "M.S. in Artificial Intelligence · KAIST", detail: "Diffusion models & LLM-guided image editing · Advisor: Prof. Jong Chul Ye" },
-  { date: "2021—22", title: "M.S.–Ph.D. Integrated Program in Solid-State Physics · Yonsei University", detail: "Three semesters of graduate coursework and research before transitioning to AI" },
+  { date: "2021—22", title: "Graduate Studies in Solid-State Physics · Yonsei University", detail: "M.S.–Ph.D. integrated program · Three semesters completed before transitioning to AI" },
   { date: "2018—21", title: "B.S. in Integrated Technology · Yonsei University", detail: "Full scholarship · Early graduation · GPA 3.95/4.3" },
 ];
 
@@ -136,18 +136,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects">
-          <h2>Research Projects</h2>
-          <div className="compact-list">
-            {projects.map((item) => (
-              <article key={item.title}>
-                <span>{item.date}</span>
-                <div><strong>{item.title}</strong><p>{item.detail}</p></div>
-              </article>
-            ))}
-          </div>
-        </section>
-
         <section id="honors">
           <h2>Honors</h2>
           <div className="compact-list">
@@ -160,6 +148,18 @@ export default function Home() {
           <h2>Education</h2>
           <div className="compact-list">
             {education.map((item) => (
+              <article key={item.title}>
+                <span>{item.date}</span>
+                <div><strong>{item.title}</strong><p>{item.detail}</p></div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="projects">
+          <h2>Research Projects</h2>
+          <div className="compact-list">
+            {projects.map((item) => (
               <article key={item.title}>
                 <span>{item.date}</span>
                 <div><strong>{item.title}</strong><p>{item.detail}</p></div>
