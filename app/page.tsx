@@ -51,10 +51,10 @@ const projects = [
 ];
 
 const education = [
-  { date: "2024—", title: "Ph.D. · KAIST", school: "Kim Jaechul Graduate School of AI", detail: "Advisor: Prof. Jong Chul Ye" },
-  { date: "2022—24", title: "M.S. · KAIST", school: "Kim Jaechul Graduate School of AI", detail: "Advisor: Prof. Jong Chul Ye" },
-  { date: "2021—22", title: "Graduate Studies · Yonsei University", school: "Department of Physics · Solid-State Physics", detail: "M.S.–Ph.D. integrated program · Three semesters" },
-  { date: "2018—21", title: "B.S. · Yonsei University", school: "School of Integrated Technology", detail: "Full scholarship · Early graduation · GPA 3.95/4.3" },
+  { date: "2024—", title: "KAIST", school: "Ph.D. in Artificial Intelligence", detail: "Kim Jaechul Graduate School of AI · Advisor: Prof. Jong Chul Ye" },
+  { date: "2022—24", title: "KAIST", school: "M.S. in Artificial Intelligence", detail: "Kim Jaechul Graduate School of AI · Advisor: Prof. Jong Chul Ye" },
+  { date: "2021—22", title: "Yonsei University", school: "Graduate Studies in Physics", detail: "Department of Physics · M.S.–Ph.D. integrated program · Three semesters" },
+  { date: "2018—21", title: "Yonsei University", school: "B.S. in Integrated Technology", detail: "School of Integrated Technology · Full scholarship · Early graduation · GPA 3.95/4.3" },
 ];
 
 function ExternalArrow() {
@@ -148,7 +148,7 @@ export default function Home() {
           <h2>Education</h2>
           <div className="compact-list">
             {education.map((item) => (
-              <article key={item.title}>
+              <article key={`${item.date}-${item.title}`}>
                 <span>{item.date}</span>
                 <div className="education-entry">
                   <strong>{item.title}</strong>
