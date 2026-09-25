@@ -43,8 +43,8 @@ test("GitHub Pages export contains the portfolio and profile metadata", async ()
   assert.match(html, /Graduate Studies in Physics/);
   assert.match(html, /Department of Physics/);
   assert.match(html, /Solid-state physics &amp; ARPES · M\.S\.–Ph\.D\. integrated program, three semesters/);
-  assert.match(html, /B\.S\. in Integrated Technology/);
-  assert.match(html, /School of Integrated Technology/);
+  assert.match(html, /B\.S\. in Integrated Technology · School of Integrated Technology/);
+  assert.match(html, /Full scholarship · Early graduation · GPA 3\.95\/4\.3/);
 
   const honorsPosition = html.indexOf("<h2>Honors</h2>");
   const educationPosition = html.indexOf("<h2>Education</h2>");
