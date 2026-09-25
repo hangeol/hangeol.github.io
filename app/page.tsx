@@ -51,10 +51,10 @@ const projects = [
 ];
 
 const education = [
-  { date: "2024—", title: "Ph.D. in Artificial Intelligence · KAIST", detail: "Language model reasoning, retrieval & reinforcement learning · Advisor: Prof. Jong Chul Ye" },
-  { date: "2022—24", title: "M.S. in Artificial Intelligence · KAIST", detail: "Diffusion models & LLM-guided image editing · Advisor: Prof. Jong Chul Ye" },
-  { date: "2021—22", title: "Graduate Studies in Solid-State Physics · Yonsei University", detail: "M.S.–Ph.D. integrated program · Three semesters completed before transitioning to AI" },
-  { date: "2018—21", title: "B.S. in Integrated Technology · Yonsei University", detail: "Full scholarship · Early graduation · GPA 3.95/4.3" },
+  { date: "2024—", title: "Ph.D. · KAIST", school: "Kim Jaechul Graduate School of AI", detail: "Advisor: Prof. Jong Chul Ye" },
+  { date: "2022—24", title: "M.S. · KAIST", school: "Kim Jaechul Graduate School of AI", detail: "Advisor: Prof. Jong Chul Ye" },
+  { date: "2021—22", title: "Graduate Studies · Yonsei University", school: "Department of Physics · Solid-State Physics", detail: "M.S.–Ph.D. integrated program · Three semesters" },
+  { date: "2018—21", title: "B.S. · Yonsei University", school: "School of Integrated Technology", detail: "Full scholarship · Early graduation · GPA 3.95/4.3" },
 ];
 
 function ExternalArrow() {
@@ -150,7 +150,11 @@ export default function Home() {
             {education.map((item) => (
               <article key={item.title}>
                 <span>{item.date}</span>
-                <div><strong>{item.title}</strong><p>{item.detail}</p></div>
+                <div className="education-entry">
+                  <strong>{item.title}</strong>
+                  <p className="education-school">{item.school}</p>
+                  <p className="education-detail">{item.detail}</p>
+                </div>
               </article>
             ))}
           </div>

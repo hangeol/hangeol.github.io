@@ -32,11 +32,15 @@ test("GitHub Pages export contains the portfolio and profile metadata", async ()
   assert.match(html, /href="https:\/\/bispl-website\.github\.io\/"/);
   assert.match(html, /Research Projects/);
   assert.doesNotMatch(html, /<h2>Experience<\/h2>/);
-  assert.match(html, /Ph\.D\. in Artificial Intelligence · KAIST/);
-  assert.match(html, /M\.S\. in Artificial Intelligence · KAIST/);
+  assert.match(html, /Ph\.D\. · KAIST/);
+  assert.match(html, /M\.S\. · KAIST/);
+  assert.match(html, /Kim Jaechul Graduate School of AI/);
   assert.match(html, /Advisor: Prof\. Jong Chul Ye/);
-  assert.match(html, /Graduate Studies in Solid-State Physics · Yonsei University/);
-  assert.match(html, /M\.S\.–Ph\.D\. integrated program · Three semesters completed before transitioning to AI/);
+  assert.match(html, /Graduate Studies · Yonsei University/);
+  assert.match(html, /Department of Physics · Solid-State Physics/);
+  assert.match(html, /M\.S\.–Ph\.D\. integrated program · Three semesters/);
+  assert.match(html, /B\.S\. · Yonsei University/);
+  assert.match(html, /School of Integrated Technology/);
 
   const honorsPosition = html.indexOf("<h2>Honors</h2>");
   const educationPosition = html.indexOf("<h2>Education</h2>");

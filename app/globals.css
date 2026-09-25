@@ -195,6 +195,8 @@ h2 {
 
 .compact-list strong { color: var(--ink); font-size: 0.9rem; }
 .compact-list p { margin: 2px 0 0; color: var(--muted); font-size: 0.8rem; }
+.education-entry .education-school { color: var(--text); font-size: 0.84rem; }
+.education-entry .education-detail { margin-top: 0; font-size: 0.76rem; }
 
 footer {
   margin-top: 55px;
