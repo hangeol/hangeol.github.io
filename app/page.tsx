@@ -14,7 +14,7 @@ const publications = [
     href: "https://arxiv.org/abs/2603.19008",
   },
   {
-    venue: "EMNLP 2026",
+    venue: "EMNLP 2026 · Oral",
     title: "Dementia-R1: Reinforced Pretraining and Reasoning from Unstructured Clinical Notes",
     authors: "Choonghan Kim*, Hyunmin Hwang*, Hangeol Chang*, Jaemin Kim*, Jinse Park, Jae-Sung Lim, Jong Chul Ye",
     summary: "Longitudinal clinical reasoning with verifiable intermediate rewards for real-world dementia prognosis.",
@@ -37,7 +37,7 @@ const publications = [
 ];
 
 const news = [
-  { date: "Aug. 2026", text: "Dementia-R1 accepted to EMNLP 2026." },
+  { date: "Sep. 2026", text: "Dementia-R1 selected for an oral presentation at EMNLP 2026." },
   { date: "Apr. 2026", text: "Universal Reasoner accepted to ICML 2026." },
   { date: "Mar. 2026", text: "Hypothesis-Conditioned Query Rewriting released on arXiv." },
   { date: "Feb. 2026", text: "Received the Silver Prize at the 32nd Samsung Humantech Paper Award." },
@@ -45,16 +45,16 @@ const news = [
   { date: "Jan. 2026", text: "Dementia-R1 released on arXiv." },
 ];
 
-const experience = [
-  { date: "2025", title: "NAVER · On-site research project", detail: "RAG pipeline for clinical decision support" },
-  { date: "2024—", title: "Government-funded clinical AI project", detail: "LLM-based dementia data processing and support platform" },
-  { date: "2021—22", title: "Yonsei University", detail: "Graduate coursework and research in solid-state physics" },
+const projects = [
+  { date: "2025", title: "Clinical Decision Support with RAG", detail: "On-site research project with NAVER · Physician-support pipeline" },
+  { date: "2024—", title: "LLM-based Dementia Data Processing & Clinical Support", detail: "Government-funded research project" },
 ];
 
 const education = [
-  { date: "2024—", title: "Ph.D. in AI · KAIST", detail: "Advisor: Prof. Jong Chul Ye" },
-  { date: "2022—24", title: "M.S. in AI · KAIST", detail: "Diffusion models and LLM-guided image editing" },
-  { date: "2018—21", title: "B.S. · Yonsei University", detail: "Full scholarship · Early graduation · 3.95/4.3" },
+  { date: "2024—", title: "Ph.D. in Artificial Intelligence · KAIST", detail: "Language model reasoning, retrieval & reinforcement learning · Advisor: Prof. Jong Chul Ye" },
+  { date: "2022—24", title: "M.S. in Artificial Intelligence · KAIST", detail: "Diffusion models & LLM-guided image editing · Advisor: Prof. Jong Chul Ye" },
+  { date: "2021—22", title: "M.S.–Ph.D. Integrated Program in Solid-State Physics · Yonsei University", detail: "Three semesters of graduate coursework and research before transitioning to AI" },
+  { date: "2018—21", title: "B.S. in Integrated Technology · Yonsei University", detail: "Full scholarship · Early graduation · GPA 3.95/4.3" },
 ];
 
 function ExternalArrow() {
@@ -92,6 +92,7 @@ export default function Home() {
           <a href="https://scholar.google.com/citations?user=VvJxxzAAAAAJ&hl=en" target="_blank" rel="noreferrer">Scholar</a>
           <a href="https://github.com/hangeol" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/hangeol-chang" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://bispl-website.github.io/" target="_blank" rel="noreferrer">Lab</a>
         </nav>
       </aside>
 
@@ -135,10 +136,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="experience">
-          <h2>Experience</h2>
+        <section id="projects">
+          <h2>Research Projects</h2>
           <div className="compact-list">
-            {experience.map((item) => (
+            {projects.map((item) => (
               <article key={item.title}>
                 <span>{item.date}</span>
                 <div><strong>{item.title}</strong><p>{item.detail}</p></div>

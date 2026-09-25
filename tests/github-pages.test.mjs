@@ -19,8 +19,8 @@ test("GitHub Pages export contains the portfolio and profile metadata", async ()
   assert.match(html, /Apr\. 2026/);
   assert.match(html, /Hypothesis-Conditioned Query Rewriting/);
   assert.match(html, /Dementia-R1/);
-  assert.match(html, /Dementia-R1 accepted to EMNLP 2026\./);
-  assert.match(html, /EMNLP 2026/);
+  assert.match(html, /EMNLP 2026 · Oral/);
+  assert.match(html, /Dementia-R1 selected for an oral presentation at EMNLP 2026\./);
   assert.match(html, /Ground-A-Score/);
   assert.doesNotMatch(html, /IPIU 2026 · Best Paper/);
   assert.match(html, /Silver Prize · Best Paper Award at IPIU 2026/);
@@ -29,6 +29,14 @@ test("GitHub Pages export contains the portfolio and profile metadata", async ()
   assert.match(html, /<strong class="author-self">Hangeol Chang<\/strong>/);
   assert.match(html, /href="\/hangeol-chang-cv\.pdf"/);
   assert.match(html, /src="\/hangeol-chang\.jpeg"/);
+  assert.match(html, /href="https:\/\/bispl-website\.github\.io\/"/);
+  assert.match(html, /Research Projects/);
+  assert.doesNotMatch(html, /<h2>Experience<\/h2>/);
+  assert.match(html, /Ph\.D\. in Artificial Intelligence · KAIST/);
+  assert.match(html, /M\.S\. in Artificial Intelligence · KAIST/);
+  assert.match(html, /Advisor: Prof\. Jong Chul Ye/);
+  assert.match(html, /M\.S\.–Ph\.D\. Integrated Program in Solid-State Physics · Yonsei University/);
+  assert.match(html, /Three semesters of graduate coursework and research before transitioning to AI/);
 });
 
 test("GitHub Pages export includes its linked public assets", async () => {
