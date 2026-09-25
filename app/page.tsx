@@ -51,9 +51,9 @@ const projects = [
 ];
 
 const education = [
-  { date: "2024—", title: "KAIST", school: "Ph.D. in Artificial Intelligence", detail: "Kim Jaechul Graduate School of AI · Advisor: Prof. Jong Chul Ye" },
-  { date: "2022—24", title: "KAIST", school: "M.S. in Artificial Intelligence", detail: "Kim Jaechul Graduate School of AI · Advisor: Prof. Jong Chul Ye" },
-  { date: "2021—22", title: "Yonsei University", school: "Graduate Studies in Physics", detail: "Department of Physics · M.S.–Ph.D. integrated program · Three semesters" },
+  { date: "2024—", title: "KAIST", school: "Ph.D. in Artificial Intelligence · Kim Jaechul Graduate School of AI", detail: "LLM reasoning, retrieval-augmented generation & reinforcement learning · Advisor: Prof. Jong Chul Ye" },
+  { date: "2022—24", title: "KAIST", school: "M.S. in Artificial Intelligence · Kim Jaechul Graduate School of AI", detail: "Diffusion models & LLM-guided image editing · Advisor: Prof. Jong Chul Ye" },
+  { date: "2021—22", title: "Yonsei University", school: "Graduate Studies in Physics · Department of Physics", detail: "Solid-state physics & ARPES · M.S.–Ph.D. integrated program, three semesters" },
   { date: "2018—21", title: "Yonsei University", school: "B.S. in Integrated Technology", detail: "School of Integrated Technology · Full scholarship · Early graduation · GPA 3.95/4.3" },
 ];
 

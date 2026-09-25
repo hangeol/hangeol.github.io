@@ -36,10 +36,13 @@ test("GitHub Pages export contains the portfolio and profile metadata", async ()
   assert.match(html, /Ph\.D\. in Artificial Intelligence/);
   assert.match(html, /M\.S\. in Artificial Intelligence/);
   assert.match(html, /Kim Jaechul Graduate School of AI/);
+  assert.match(html, /LLM reasoning, retrieval-augmented generation &amp; reinforcement learning/);
+  assert.match(html, /Diffusion models &amp; LLM-guided image editing/);
   assert.match(html, /Advisor: Prof\. Jong Chul Ye/);
   assert.match(html, /<strong>Yonsei University<\/strong>/);
   assert.match(html, /Graduate Studies in Physics/);
-  assert.match(html, /Department of Physics · M\.S\.–Ph\.D\. integrated program · Three semesters/);
+  assert.match(html, /Department of Physics/);
+  assert.match(html, /Solid-state physics &amp; ARPES · M\.S\.–Ph\.D\. integrated program, three semesters/);
   assert.match(html, /B\.S\. in Integrated Technology/);
   assert.match(html, /School of Integrated Technology/);
 
