@@ -9,7 +9,7 @@ const publications = [
   {
     venue: "Under review · 2026",
     title: "LEGO-OPD: Factorized Teacher Composition for Multimodal On-Policy Distillation",
-    authors: "Jaeyun Shin, Hangeol Chang, Jong Chul Ye",
+    authors: "Jaeyun Shin*, Hangeol Chang*, Jong Chul Ye",
     summary: "Factorized teacher composition that improves visual grounding while preserving text-only reasoning in multimodal on-policy distillation.",
     href: "https://arxiv.org/abs/2610.00333",
   },
@@ -44,6 +44,7 @@ const publications = [
 ];
 
 const news = [
+  { date: "Sep. 2026", text: "LEGO-OPD released on arXiv." },
   { date: "Sep. 2026", text: "Dementia-R1 selected for an oral presentation at EMNLP 2026." },
   { date: "Apr. 2026", text: "Universal Reasoner accepted to ICML 2026." },
   { date: "Mar. 2026", text: "Hypothesis-Conditioned Query Rewriting released on arXiv." },

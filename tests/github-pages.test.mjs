@@ -18,8 +18,9 @@ test("GitHub Pages export contains the portfolio and profile metadata", async ()
   assert.match(html, /Universal Reasoner/);
   assert.match(html, /Apr\. 2026/);
   assert.match(html, /LEGO-OPD: Factorized Teacher Composition for Multimodal On-Policy Distillation/);
-  assert.match(html, /Jaeyun Shin, /);
+  assert.match(html, /Jaeyun Shin\*, <strong class="author-self">Hangeol Chang<\/strong>\*/);
   assert.match(html, /href="https:\/\/arxiv\.org\/abs\/2610\.00333"/);
+  assert.match(html, /LEGO-OPD released on arXiv\./);
   assert.match(html, /Hypothesis-Conditioned Query Rewriting/);
   assert.match(html, /Dementia-R1/);
   assert.match(html, /EMNLP 2026 · Oral/);
