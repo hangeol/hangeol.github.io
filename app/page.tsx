@@ -8,6 +8,13 @@ const publications = [
   },
   {
     venue: "Under review · 2026",
+    title: "LEGO-OPD: Factorized Teacher Composition for Multimodal On-Policy Distillation",
+    authors: "Jaeyun Shin, Hangeol Chang, Jong Chul Ye",
+    summary: "Factorized teacher composition that improves visual grounding while preserving text-only reasoning in multimodal on-policy distillation.",
+    href: "https://arxiv.org/abs/2610.00333",
+  },
+  {
+    venue: "Under review · 2026",
     title: "Hypothesis-Conditioned Query Rewriting for Decision-Useful Retrieval",
     authors: "Hangeol Chang, Changsun Lee, Seungjoon Rho, Junho Yeo, Jong Chul Ye",
     summary: "A training-free retrieval planner that searches for evidence useful to a decision, rather than broadly relevant context.",
