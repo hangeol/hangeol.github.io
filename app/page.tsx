@@ -14,7 +14,7 @@ const publications = [
     href: "https://arxiv.org/abs/2610.00333",
   },
   {
-    venue: "EACL Findings",
+    venue: "EACL Findings 2027",
     title: "HYPER: Hypothesis-Guided Planning for Evidence-Seeking Retrieval in Medical Question Answering",
     authors: "Hangeol Chang, Changsun Lee, Seungjoon Rho, Junho Yeo, Jong Chul Ye",
     summary: "A training-free retrieval planner that searches for evidence useful to a decision, rather than broadly relevant context.",
@@ -44,7 +44,7 @@ const publications = [
 ];
 
 const news = [
-  { date: "Nov. 2026", text: "HYPER accepted to EACL Findings." },
+  { date: "Nov. 2026", text: "HYPER accepted to EACL Findings 2027." },
   { date: "Sep. 2026", text: "LEGO-OPD released on arXiv." },
   { date: "Sep. 2026", text: "Dementia-R1 selected for an oral presentation at EMNLP 2026." },
   { date: "Apr. 2026", text: "Universal Reasoner accepted to ICML 2026." },
