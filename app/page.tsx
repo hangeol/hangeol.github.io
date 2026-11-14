@@ -44,6 +44,7 @@ const publications = [
 ];
 
 const news = [
+  { date: "Nov. 2026", text: "HYPER accepted to EACL Findings." },
   { date: "Sep. 2026", text: "LEGO-OPD released on arXiv." },
   { date: "Sep. 2026", text: "Dementia-R1 selected for an oral presentation at EMNLP 2026." },
   { date: "Apr. 2026", text: "Universal Reasoner accepted to ICML 2026." },
