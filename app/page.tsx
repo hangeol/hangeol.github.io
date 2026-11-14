@@ -109,10 +109,7 @@ export default function Home() {
         <section id="about">
           <h2>About Me</h2>
           <p>
-            I am a Ph.D. student at KAIST, advised by Prof. Jong Chul Ye. I study how to make language models reason, retrieve evidence, and respond to rewards more effectively.
-          </p>
-          <p>
-            My research focuses on language model reasoning, retrieval-augmented generation, reinforcement learning, and reward-guided model behavior, with applications in general reasoning and clinical AI.
+            I am a Ph.D. student at KAIST, advised by Prof. Jong Chul Ye. I am interested in how language models can acquire, transfer, and use knowledge more effectively. My work spans reinforcement learning, model distillation, and retrieval-augmented reasoning, with applications in general-purpose and medical AI.
           </p>
         </section>
 
